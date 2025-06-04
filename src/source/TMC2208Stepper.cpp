@@ -17,14 +17,14 @@ TMC2208Stepper::TMC2208Stepper(Stream * SerialPort, float RS, uint8_t addr) :
 		defaults();
 	}
 
-TMC2208Stepper::TMC2208Stepper(Stream * SerialPort, float RS, uint8_t addr, uint16_t mul_pin1, uint16_t mul_pin2, uint16_t mul_pin3, uint16_t mul_pin4) :
+TMC2208Stepper::TMC2208Stepper(Stream * SerialPort, float RS, uint8_t addr, int mul_pin1, int mul_pin2, int mul_pin3, int mul_pin4) :
 	TMC2208Stepper(SerialPort, RS)
 	{
 		SSwitch *SMulObj = new SSwitch(mul_pin1, mul_pin2, mul_pin3,mul_pin4, addr);
 		sswitch = SMulObj;
 	}
 
-TMC2208Stepper::TMC2208Stepper(Stream * SerialPort, float RS, uint8_t addr, uint16_t mul_pin1, uint16_t mul_pin2) :
+TMC2208Stepper::TMC2208Stepper(Stream * SerialPort, float RS, uint8_t addr, int mul_pin1, int mul_pin2) :
 	TMC2208Stepper(SerialPort, RS)
 	{
 		SSwitch *SMulObj = new SSwitch(mul_pin1, mul_pin2, -1,-1, addr);

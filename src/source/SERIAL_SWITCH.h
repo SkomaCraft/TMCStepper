@@ -19,12 +19,12 @@
 
 class SSwitch {
   public:
-    SSwitch(const uint16_t pin1, const uint16_t pin2, const uint16_t pin3, const uint16_t pin4, const uint8_t address);
+    SSwitch(const int pin1, const int pin2, const int pin3, const int pin4, const uint8_t address);
     void active();
   private:
-    const uint16_t p1;
-    const uint16_t p2;
-    const uint16_t p3;
-    const uint16_t p4;
+    const int p1;
+    const int p2;
+    const int p3;
+    const int p4;
     const uint8_t addr;
 };
