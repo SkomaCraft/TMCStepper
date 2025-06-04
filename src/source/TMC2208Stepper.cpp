@@ -24,6 +24,13 @@ TMC2208Stepper::TMC2208Stepper(Stream * SerialPort, float RS, uint8_t addr, uint
 		sswitch = SMulObj;
 	}
 
+TMC2208Stepper::TMC2208Stepper(Stream * SerialPort, float RS, uint8_t addr, uint16_t mul_pin1, uint16_t mul_pin2) :
+	TMC2208Stepper(SerialPort, RS)
+	{
+		SSwitch *SMulObj = new SSwitch(mul_pin1, mul_pin2, -1,-1, addr);
+		sswitch = SMulObj;
+	}
+
 #if SW_CAPABLE_PLATFORM
 	// Protected
 	// addr needed for TMC2209
