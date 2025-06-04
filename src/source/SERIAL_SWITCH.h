@@ -19,7 +19,7 @@
 
 class SSwitch {
   public:
-    SSwitch(const uint16_t pin1, const uint16_t pin2,, const uint16_t pin3, const uint16_t pin4, const uint8_t address);
+    SSwitch(const uint16_t pin1, const uint16_t pin2, const uint16_t pin3, const uint16_t pin4, const uint8_t address);
     void active();
   private:
     const uint16_t p1;
